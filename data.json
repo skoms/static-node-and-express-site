@@ -1,0 +1,49 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "project_name": "Random Quote Generator",
+            "description": "A simple app that displays a randomly selected Quote",
+            "technologies": "JavaScript, CSS, HTML",
+            "live_link": "",
+            "github_link": "https://github.com/skoms/Random-Quote-Generator",
+            "image_urls": ["https://via.placeholder.com/150"]
+        },
+        {
+            "id": 2,
+            "project_name": "Public API Requests",
+            "description": "A simple directory that pulls random 'employees' from an API and lists it on a page, with a search function",
+            "technologies": "JavaScript, CSS, HTML, AJAX",
+            "live_link": "",
+            "github_link": "https://github.com/skoms/public-api-requests",
+            "image_urls": ["https://via.placeholder.com/150"]
+        },
+        {
+            "id": 3,
+            "project_name": "Phrase Hunter",
+            "description": "Word guessing game where a random phrase is chosen and you have to guess",
+            "technologies": "JavaScript, CSS, HTML",
+            "live_link": "",
+            "github_link": "https://github.com/skoms/oop-game-show-app",
+            "image_urls": ["https://via.placeholder.com/150"]
+        },
+        {
+            "id": 4,
+            "project_name": "Interactive Form",
+            "description": "A registration form with validators",
+            "technologies": "JavaScript, CSS, HTML",
+            "live_link": "",
+            "github_link": "https://github.com/skoms/Interactive-Form-Project",
+            "image_urls": ["https://via.placeholder.com/150"]
+        },
+        {
+            "id": 5,
+            "project_name": "Data Pagination and filtering",
+            "description": "It is a directory of people and several pages with a search function",
+            "technologies": "JavaScript, CSS, HTML",
+            "live_link": "",
+            "github_link": "https://github.com/skoms/Data-Pagination-and-Filtering",
+            "image_urls": ["https://via.placeholder.com/150"]
+        }
+    ]
+}
