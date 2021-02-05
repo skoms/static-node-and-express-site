@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content  
+    nav.nav
+    a(href='/')
+      span &larr;
+      |  Back
+
+    .error
+        h1 Error: #{err.message} (#{err.status})
+        p= err.stack 

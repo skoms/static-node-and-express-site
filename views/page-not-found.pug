@@ -1,0 +1,13 @@
+extends layout.pug
+
+block content  
+    nav.nav
+        a(href='/')
+            span &larr;
+            |  Back
+
+    .error
+        h1 Error: #{err.message} (#{err.status})
+        img(src="/static/images/404icon.png", alt="Desktop Error Icon" height="150")
+        h3 Sorry, that page was not found. Please check to make sure the address is correct.
+        p= err.stack 

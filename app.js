@@ -22,7 +22,7 @@ app.get('/project/:id', (req, res, next) => {
         const err = new Error('Not Found');
         err.status = 404;
         err.message = "Page not found";
-        console.log(`Error: ${err.message} (${err.status})`);
+        res.render('page-not-found', { err });
         next();
     }
 });
@@ -31,7 +31,7 @@ app.use((req, res, next) => {
     const err = new Error('Not Found');
     err.status = 404;
     err.message = "Page not found";
-    console.log(`Error: ${err.message} (${err.status})`);
+    res.render('page-not-found', { err });
     next();
 });
 
@@ -40,11 +40,12 @@ app.use(( err, req, res, next) => {
         console.log('Global error handler called', err);
     }
 
-    if( !err.status === 404 ) {
+    if( err.status !== 404 ) {
         err.message = err.message || 'Sorry, something seems to be wrong on the server-side.';
         err.status = err.status || 500;
         res.status(err.status);
         console.log(`Error: ${err.message} (${err.status})`);
+        res.render('error', { err });
     }
 });
 
