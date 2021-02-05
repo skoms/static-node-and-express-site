@@ -13,7 +13,7 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
-app.get('/project/:id', (req, res) => {
+app.get('/project/:id', (req, res, next) => {
     let id = req.params.id;
     if( parseInt(id) && parseInt(id) <= (id + 1)) {
         id = parseInt(id);
@@ -36,10 +36,16 @@ app.use((req, res, next) => {
 });
 
 app.use(( err, req, res, next) => {
-    res.locals.err = err;
-    res.status(err.status);
-    console.log(`Error: ${err.message} (${err.status})`);
-    next();
+    if( err ) {
+        console.log('Global error handler called', err);
+    }
+
+    if( !err.status === 404 ) {
+        err.message = err.message || 'Sorry, something seems to be wrong on the server-side.';
+        err.status = err.status || 500;
+        res.status(err.status);
+        console.log(`Error: ${err.message} (${err.status})`);
+    }
 });
 
 app.listen(3000, () => {
