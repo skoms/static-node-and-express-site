@@ -11,6 +11,3 @@ document.querySelector('#menu-icon').addEventListener('click', e => {
   !headerBtnClicked ? body.style.transform = 'translateX(300px)' : body.style.transform = 'translateX(0px)';
   return headerBtnClicked = !headerBtnClicked;
 });
-
-
-// "https://via.placeholder.com/150"
