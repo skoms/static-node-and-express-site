@@ -32,6 +32,7 @@ app.get('/project/:id', (req, res, next) => {
         const err = new Error('Not Found');
         err.status = 404;
         err.message = "Page not found";
+        console.log(`Error: ${err.message} (${err.status})`); // It was not specified whether to replace this, so I kept it just in case.
         res.render('page-not-found', { err });
     }
 });
@@ -41,6 +42,7 @@ app.use((req, res, next) => {
     const err = new Error('Not Found');
     err.status = 404;
     err.message = "Page not found";
+    console.log(`Error: ${err.message} (${err.status})`); // It was not specified whether to replace this, so I kept it just in case.
     res.render('page-not-found', { err });
 });
 
